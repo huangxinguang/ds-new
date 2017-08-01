@@ -57,7 +57,7 @@ public class StsscheckTask {
     }
 
     /**
-     * 线程池创建一个线程执行，定时执行任务
+     * 定时执行任务
      */
     public void syncDataAndSave() {
         long start = System.currentTimeMillis();
