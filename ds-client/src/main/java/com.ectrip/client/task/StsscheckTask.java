@@ -83,7 +83,6 @@ public class StsscheckTask {
                 for(Stsschecktab stsschecktab : stsscheckList) {//同步状态都设为1
                     stsschecktab.setSyncstatus(1);
                 }
-
                 int threadCount;
                 if(stsscheckList.size() % COMMIT_NUM == 0) {
                     threadCount = stsscheckList.size() / COMMIT_NUM;
