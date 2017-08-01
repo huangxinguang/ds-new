@@ -74,10 +74,8 @@ public class StsscheckTask {
     @Transactional
     public void queryAndSaveSyncData() {
         try {
-            LOGGER.info("开始查询数据...");
             LOGGER.info("查询参数:{},{}",PROVIDER_ID,CURRENT_DATE);
             List<Stsschecktab> stsscheckList = dataService.queryAllNoSyncStsscheckList(PROVIDER_ID,CURRENT_DATE);//中心服务器数据
-            LOGGER.info("查询数据结束...");
             LOGGER.info("查询数据条数:{}",CollectionUtils.isEmpty(stsscheckList) ? 0 : stsscheckList.size());
 
             //保存数据并更新同步状态
@@ -86,7 +84,6 @@ public class StsscheckTask {
                     stsschecktab.setSyncstatus(1);
                 }
 
-                LOGGER.info("开始批量合并数据...");
                 int threadCount;
                 if(stsscheckList.size() % COMMIT_NUM == 0) {
                     threadCount = stsscheckList.size() / COMMIT_NUM;
@@ -111,5 +108,6 @@ public class StsscheckTask {
         }catch (Exception e) {
             LOGGER.error("定时同步出错了！",e);
         }
+
     }
 }
