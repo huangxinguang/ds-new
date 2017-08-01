@@ -1,0 +1,1 @@
+alter table stsschecktab add (SYNCSTATUS NUMBER(1,0) default 0);

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+						http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 使用HessianServiceExporter为服务接口Impl在网络地址中映射一个Hessian服务
+        http://localhost:8080/hessian/dataService
+    -->
+    <bean name="/dataService" class="org.springframework.remoting.caucho.HessianServiceExporter">
+        <!-- Hessian服务的接口 -->
+        <property name="serviceInterface" value="com.ectrip.api.service.ApiStsscheckService"/>
+        <!-- Hessian服务的接口Impl -->
+        <property name="service" ref="stsscheckService"></property>
+    </bean>
+
+</beans>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ectrip.server.dao.StsschecktabMapper">
+  <resultMap id="BaseResultMap" type="com.ectrip.api.model.Stsschecktab">
+    <id column="SZSOLDTICKETSUBID" jdbcType="DECIMAL" property="szsoldticketsubid" />
+    <id column="SZSOLDTICKETID" jdbcType="DECIMAL" property="szsoldticketid" />
+    <id column="ISALESVOUCHERDETAILSID" jdbcType="DECIMAL" property="isalesvoucherdetailsid" />
+    <id column="ISALESVOUCHERID" jdbcType="DECIMAL" property="isalesvoucherid" />
+    <id column="ITICKETSTATIONID" jdbcType="DECIMAL" property="iticketstationid" />
+    <result column="IGARDENGATEID" jdbcType="DECIMAL" property="igardengateid" />
+    <result column="IBUSINESSID" jdbcType="DECIMAL" property="ibusinessid" />
+    <result column="ISCENICID" jdbcType="DECIMAL" property="iscenicid" />
+    <result column="SZSCENICNAME" jdbcType="VARCHAR" property="szscenicname" />
+    <result column="ICROWDKINDID" jdbcType="DECIMAL" property="icrowdkindid" />
+    <result column="SZCROWDKINDNAME" jdbcType="VARCHAR" property="szcrowdkindname" />
+    <result column="ITICKETTYPEID" jdbcType="DECIMAL" property="itickettypeid" />
+    <result column="SZTICKETTYPENAME" jdbcType="VARCHAR" property="sztickettypename" />
+    <result column="IZTICKETTYPEID" jdbcType="DECIMAL" property="iztickettypeid" />
+    <result column="MACTUALSALEPRICE" jdbcType="DECIMAL" property="mactualsaleprice" />
+    <result column="BYCHECKTYPE" jdbcType="DECIMAL" property="bychecktype" />
+    <result column="DTLASTCHECKDATE" jdbcType="VARCHAR" property="dtlastcheckdate" />
+    <result column="BYLASTCHECKDIR" jdbcType="DECIMAL" property="bylastcheckdir" />
+    <result column="BYCONSUMEMODE" jdbcType="VARCHAR" property="byconsumemode" />
+    <result column="IPASSTIMES" jdbcType="DECIMAL" property="ipasstimes" />
+    <result column="MSINGLETIMES" jdbcType="DECIMAL" property="msingletimes" />
+    <result column="IPASSEDTIMES" jdbcType="DECIMAL" property="ipassedtimes" />
+    <result column="MLIMITCONSUME" jdbcType="DECIMAL" property="mlimitconsume" />
+    <result column="MSINGLECONSUME" jdbcType="DECIMAL" property="msingleconsume" />
+    <result column="MCONSUMED" jdbcType="DECIMAL" property="mconsumed" />
+    <result column="IPARTITIONSIGN" jdbcType="DECIMAL" property="ipartitionsign" />
+    <result column="IVERSION" jdbcType="DECIMAL" property="iversion" />
+    <result column="DTBEGINDATE" jdbcType="VARCHAR" property="dtbegindate" />
+    <result column="DTENDDATE" jdbcType="VARCHAR" property="dtenddate" />
+    <result column="SZWICKETSETINFO" jdbcType="VARCHAR" property="szwicketsetinfo" />
+    <result column="BYISOUT" jdbcType="DECIMAL" property="byisout" />
+    <result column="TRIPID" jdbcType="DECIMAL" property="tripid" />
+    <result column="ISVALID" jdbcType="DECIMAL" property="isvalid" />
+    <result column="DTMAKEDATE" jdbcType="VARCHAR" property="dtmakedate" />
+    <result column="MPASSTIMES" jdbcType="DECIMAL" property="mpasstimes" />
+    <result column="MSINGLEDTIMES" jdbcType="DECIMAL" property="msingledtimes" />
+    <result column="SZTICKETPRINTNO" jdbcType="VARCHAR" property="szticketprintno" />
+    <result column="MANYOUNO" jdbcType="VARCHAR" property="manyouno" />
+    <result column="MYZJ" jdbcType="VARCHAR" property="myzj" />
+    <result column="NAME1" jdbcType="VARCHAR" property="name1" />
+    <result column="ZJNO1" jdbcType="VARCHAR" property="zjno1" />
+    <result column="BYUSAGE" jdbcType="DECIMAL" property="byusage" />
+    <result column="BYUSELIMIT" jdbcType="DECIMAL" property="byuselimit" />
+    <result column="ISFRISTTIMAEYZ" jdbcType="DECIMAL" property="isfristtimaeyz" />
+    <result column="ISFRISTACTIVE" jdbcType="DECIMAL" property="isfristactive" />
+    <result column="VALIDITYDAY" jdbcType="DECIMAL" property="validityday" />
+    <result column="ITIMEINTERVAL" jdbcType="DECIMAL" property="itimeinterval" />
+    <result column="BYREGFINGERPRINTTYPE" jdbcType="VARCHAR" property="byregfingerprinttype" />
+    <result column="BYWICKETCONSUMETYPE" jdbcType="VARCHAR" property="bywicketconsumetype" />
+    <result column="SZMEMO" jdbcType="VARCHAR" property="szmemo" />
+    <result column="ISA" jdbcType="DECIMAL" property="isa" />
+    <result column="ISB" jdbcType="DECIMAL" property="isb" />
+    <result column="ISC" jdbcType="DECIMAL" property="isc" />
+    <result column="ISD" jdbcType="DECIMAL" property="isd" />
+    <result column="ISE" jdbcType="DECIMAL" property="ise" />
+    <result column="ISF" jdbcType="DECIMAL" property="isf" />
+    <result column="ISG" jdbcType="DECIMAL" property="isg" />
+    <result column="ISH" jdbcType="DECIMAL" property="ish" />
+    <result column="ISI" jdbcType="DECIMAL" property="isi" />
+    <result column="ISJ" jdbcType="DECIMAL" property="isj" />
+    <result column="NOTEA" jdbcType="VARCHAR" property="notea" />
+    <result column="NOTEB" jdbcType="VARCHAR" property="noteb" />
+    <result column="NOTEC" jdbcType="VARCHAR" property="notec" />
+    <result column="NOTED" jdbcType="VARCHAR" property="noted" />
+    <result column="NOTEE" jdbcType="VARCHAR" property="notee" />
+    <result column="NOTEF" jdbcType="VARCHAR" property="notef" />
+    <result column="NOTEG" jdbcType="VARCHAR" property="noteg" />
+    <result column="NOTEH" jdbcType="VARCHAR" property="noteh" />
+    <result column="NOTEI" jdbcType="VARCHAR" property="notei" />
+    <result column="NOTEJ" jdbcType="VARCHAR" property="notej" />
+    <result column="SYNCSTATUS" jdbcType="DECIMAL" property="syncstatus" />
+  </resultMap>
+
+  <sql id="Base_Column_List">
+    SZSOLDTICKETSUBID, SZSOLDTICKETID, ISALESVOUCHERDETAILSID, ISALESVOUCHERID, ITICKETSTATIONID, 
+    IGARDENGATEID, IBUSINESSID, ISCENICID, SZSCENICNAME, ICROWDKINDID, SZCROWDKINDNAME, 
+    ITICKETTYPEID, SZTICKETTYPENAME, IZTICKETTYPEID, MACTUALSALEPRICE, BYCHECKTYPE, DTLASTCHECKDATE, 
+    BYLASTCHECKDIR, BYCONSUMEMODE, IPASSTIMES, MSINGLETIMES, IPASSEDTIMES, MLIMITCONSUME, 
+    MSINGLECONSUME, MCONSUMED, IPARTITIONSIGN, IVERSION, DTBEGINDATE, DTENDDATE, SZWICKETSETINFO, 
+    BYISOUT, TRIPID, ISVALID, DTMAKEDATE, MPASSTIMES, MSINGLEDTIMES, SZTICKETPRINTNO, 
+    MANYOUNO, MYZJ, NAME1, ZJNO1, BYUSAGE, BYUSELIMIT, ISFRISTTIMAEYZ, ISFRISTACTIVE, 
+    VALIDITYDAY, ITIMEINTERVAL, BYREGFINGERPRINTTYPE, BYWICKETCONSUMETYPE, SZMEMO, ISA, 
+    ISB, ISC, ISD, ISE, ISF, ISG, ISH, ISI, ISJ, NOTEA, NOTEB, NOTEC, NOTED, NOTEE, NOTEF, 
+    NOTEG, NOTEH, NOTEI, NOTEJ, SYNCSTATUS
+  </sql>
+  <!--查询所有未同步的数据-->
+  <select id="queryAllNoSyncStsscheckList" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from STSSCHECKTAB where SYNCSTATUS != 1
+    <if test="providerId != null and providerId != ''">
+      and ISCENICID=#{providerId}
+    </if>
+    <if test="currentDate != null and currentDate != ''">
+      and to_date(DTMAKEDATE,'yyyy-mm-dd hh24:mi:ss') &gt;= to_date(concat(#{currentDate,jdbcType=VARCHAR},' 00:00:00'),'yyyy-mm-dd hh24:mi:ss')
+    </if>
+  </select>
+
+  <!--批量更新同步状态-->
+  <update id="batchUpdateSyncStatus" parameterType="List">
+    begin
+    <foreach collection="list" item="item" index="index" separator=";" >
+      update STSSCHECKTAB
+      <set>
+        SYNCSTATUS = 1
+      </set>
+      where SZSOLDTICKETSUBID = #{item.szsoldticketsubid}
+            and SZSOLDTICKETID = #{item.szsoldticketid}
+            and ISALESVOUCHERDETAILSID = #{item.isalesvoucherdetailsid}
+            and ISALESVOUCHERID = #{item.isalesvoucherid}
+            and ITICKETSTATIONID = #{item.iticketstationid}
+    </foreach>
+    ;end;
+  </update>
+
+</mapper>
